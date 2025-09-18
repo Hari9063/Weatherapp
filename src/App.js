@@ -5,10 +5,11 @@ import { useState } from 'react';
 function App() {
   const[story,setStory]=useState();
   const[city,setCity]=useState();
-  const apiurl="https://weatherappbackend4.onrender.com";
+  
 
   async function FetchStory(){
     try{
+      const apiurl="https://weatherappbackend4.onrender.com";
     const response=await fetch(`${apiurl}/api/weather/${city}`);
     if(!response.ok){
       return new Error("Not found")
