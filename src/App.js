@@ -9,7 +9,7 @@ function App() {
 
   async function FetchStory(){
     try{
-      const apiurl="https://weatherappbackend4.onrender.com";
+      const apiurl="https://weatherappbackend-3.onrender.com";
     const response=await fetch(`${apiurl}/api/weather/${city}`);
     if(!response.ok){
       return new Error("Not found")
